@@ -1,0 +1,21 @@
+{% extends "layout.tmpl" %}
+
+{% block title %}
+  Fehlstunden
+{% endblock %}
+
+{% block content %}
+  <h1>Alle Fehlstunden</h1>
+
+  <ul>
+    {% for event in events %}
+      <li>
+          <a href="{{url_for('school', id=event.school.id)}}">{{event.school.name}}</a>: 
+          {{event.group}} ({{event.course}}); {{event.reason}}
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock %}
+
+
+

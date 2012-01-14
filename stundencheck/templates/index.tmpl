@@ -1,0 +1,15 @@
+{% extends "layout.tmpl" %}
+
+{% block title %}
+  Willkommen
+{% endblock %}
+
+{% block content %}
+  <h1>Stundencheck</h1>
+
+  {% for school in schools %}
+    <li><a href="{{url_for('school', id=school.id)}}">{{school.name}}</a></li>
+  {% endfor %}
+{% endblock %}
+
+
