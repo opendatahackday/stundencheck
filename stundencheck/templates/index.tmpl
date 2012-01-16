@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block content %}
-  <h1>Stundencheck</h1>
+  <h1>{{count}} Leere Klassenzimmer in Hamburg</h1>
 
   {% for school in schools %}
     <li><a href="{{url_for('school', id=school.id)}}">{{school.name}}</a></li>

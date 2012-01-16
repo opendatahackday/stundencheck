@@ -1,13 +1,33 @@
-<html>
+<!DOCTYPE html>
+<html lang="en-us">
   <head>
+    <meta charset="utf-8" />
     <title>Stundencheck: no teacher, no cry</title>
     <link rel="stylesheet" type="text/css" href="/static/css/bootstrap.min.css" />
   </head>
   <body>
-    <div class="container">
-      {% block content %}
-        - No Content -
-      {% endblock %}
+    <div class="topbar" data-scrollspy="scrollspy" >
+      <div class="topbar-inner">
+        <div class="container">
+          <a class="brand" href="{{url_for('index')}}">StundenCheck</a>
+          <ul class="nav">
+            <li><a href="{{url_for('list')}}">Alle Berichte</a></li>
+          </ul>
+          <ul class="nav secondary-nav">
+            <li><a href="{{url_for('report')}}">Eintragen</a></li>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="container blackboard">
+      <div class="row">
+        <div class="offset4 span12">
+          {% block content %}
+            - No Content -
+          {% endblock %}
+        </div>
+      </div>
     </div>
   </body>
 </html>
